@@ -3,5 +3,5 @@ if type -q fenv
     or set -gx SDKMAN_DIR ~/.sdkman
     set -g sdkman_prefix $SDKMAN_DIR
 
-    fenv "source $SDKMAN_DIR/bin/sdkman-init.sh"
+    fenv "source $sdkman_prefix/bin/sdkman-init.sh"
 end
