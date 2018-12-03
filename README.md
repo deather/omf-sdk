@@ -28,7 +28,7 @@ $ sdk
 
 ## FAQ
 
-**Q: I'm not installed SDKMAN in the default directory. How can I specify to the plugin the new installation directory ?**
+**Q: I've not installed SDKMAN in the default directory. How can I specify to the plugin the new installation directory ?**
 
 A: If you were installed SDKMAN in another directory, you need to create a file in the directory `~/.config/fish/conf.d/`. The files are executed in alphabetical order.
 For example you can create a file `00_sdkman_path.fish`:
