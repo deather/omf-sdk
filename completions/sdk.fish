@@ -41,12 +41,12 @@ function __fish_sdkman_specifying_candidate
 end
 
 function __fish_sdkman_candidates
-  cat ~/.sdkman/var/candidates | tr ',' '\n'
+  cat $sdkman_prefix/var/candidates | tr ',' '\n'
 end
 
 function __fish_sdkman_installed_versions
   set cmd (commandline -opc)
-  ls -v1 ~/.sdkman/candidates/$cmd[3] | grep -v current
+  ls -v1 $sdkman_prefix/candidates/$cmd[3] | grep -v current
 end
 
 # install
