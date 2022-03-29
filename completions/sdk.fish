@@ -46,7 +46,10 @@ end
 
 function __fish_sdkman_installed_versions
   set cmd (commandline -opc)
-  ls -v1 $sdkman_prefix/candidates/$cmd[3] | grep -v current
+
+  if [ -d $sdkman_prefix/$cmd[3] ]
+    ls -v1 $sdkman_prefix/$cmd[3] | grep -v current
+  end
 end
 
 # install
