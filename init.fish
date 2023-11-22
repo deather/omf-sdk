@@ -5,7 +5,7 @@ if type -q fenv
 
     fenv "source $sdkman_prefix/bin/sdkman-init.sh"
 
-  if set -q SDKMAN_DIR && grep -q "^sdkman_auto_env=true" "$SDKMAN_DIR/etc/config"
+  if grep -q "^sdkman_auto_env=true" "$sdkman_prefix/etc/config"
     function __omf_sdk_sdkman_auto_env --on-variable PWD
   
       # chdir from current SDKMAN_ENV dirtree outside
